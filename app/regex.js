@@ -1,26 +1,33 @@
 exports = (typeof window === 'undefined') ? global : window;
 
 exports.regexAnswers = {
-  containsNumber : function(str) {
+    containsNumber: function(str) {
 
-  },
+        var patt = new RegExp(/\d/);
+        var res = patt.test(str);
+        return res;
+    },
 
-  containsRepeatingLetter : function(str) {
+    containsRepeatingLetter: function(str) {
+      var patt = new RegExp(/([a-zA-Z]).*?\1/);
+      var res = patt.test(str);
+      return res;
+    },
 
-  },
+    endsWithVowel: function(str) {
+      var patt = new RegExp(/[aeiou]([bcdfghjklmnpqrstvwxyz]|nt)$/);
+      var res = patt.test(str);
+      return res;
+    },
 
-  endsWithVowel : function(str) {
+    captureThreeNumbers: function(str) {
 
-  },
+    },
 
-  captureThreeNumbers : function(str) {
+    matchesPattern: function(str) {
 
-  },
+    },
+    isUSD: function(str) {
 
-  matchesPattern : function(str) {
-
-  },
-  isUSD : function(str) {
-
-  }
+    }
 };

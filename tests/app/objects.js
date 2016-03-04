@@ -13,8 +13,7 @@ describe('objects and context', function() {
       name : 'Matt',
       greeting : 'Hello',
       sayIt : function() {
-        return  this.greeting + ', ' +
-                this.name + '!';
+        return  this.greeting + ', ' + this.name + '!';
       }
     };
 
